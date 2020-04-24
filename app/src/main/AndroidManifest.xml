@@ -10,16 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+            <activity android:name=".Ch10Activity1" />
+            <activity android:name=".Ch10Activity2" />
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-        <activity android:name=".Ch10Activity1" />
-        <activity android:name=".Ch10Activity2" />
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <receiver
@@ -27,9 +25,29 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.inspur.broadcast"></action>
+                <action android:name="com.inspur.broadcast" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".Ch10Activity3" />
+
+        <service
+            android:name=".MediaService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Ch12Activity2" />
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".MyService2"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Ch13Activity1"></activity>
     </application>
 
 </manifest>
